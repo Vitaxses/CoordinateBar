@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "coordinatebar",
+  "version": "1.3",
+  "name": "CoordinateBar",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/coordinatebar/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.vitaxses.coordinatebar.client.CoordinatebarClient"
+    ],
+    "main": [
+      "com.vitaxses.coordinatebar.Coordinatebar"
+    ]
+  },
+  "mixins": [
+    "coordinatebar.mixins.json",
+    {
+      "config": "coordinatebar.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
